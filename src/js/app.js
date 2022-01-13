@@ -4,9 +4,14 @@
 // Feel free with using ES6 here.
 import $ from 'jquery';
 
-import dots from './modules/dots';
-
+import createStars from './modules/task3Stars';
+import createDots from './modules/task2Dots';
+import dotsHue from './modules/task4HUE';
+import randomBalls from './modules/task10Balls';
 // When DOM is ready
 $(() => {
-  dots();
+  createStars();
+  createDots();
+  dotsHue();
+  randomBalls();
 });

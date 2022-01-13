@@ -1,0 +1,44 @@
+.wrapper {
+    font-size: 21px;
+    width: 100%;
+    min-height: 400px;
+    display: block;
+    margin-left: 100px;
+  
+  
+  .cube-wrapper {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+
+    &:hover .cube {
+        transform: translate(0,50%) rotateX(-90deg);
+      }
+  }
+  
+  .cube, .cube div {
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform .7s ease-in-out;
+  }
+  
+  .cube-front {
+    background: red;
+    border: 1px solid black;
+  }
+  
+  .cube-top {
+    background: purple;
+    background-size: 100%;
+    border: 1px solid black;
+    transform: translate(0, -100%) rotateX(90deg);
+    transform-origin: bottom;
+  }
+  
+  
+}

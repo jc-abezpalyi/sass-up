@@ -1,0 +1,14 @@
+@mixin random-rgba {
+    background-color: rgba(random(255),random(255),random(255),random(100)/100) ;
+}
+.task-5{
+    height: 400px;
+    div{
+        height: 30px;
+        @for $i from 0 through 10 {
+            &:nth-child(#{$i}) {
+              @include random-rgba
+            }
+          }
+    }
+}
