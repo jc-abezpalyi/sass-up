@@ -25,7 +25,7 @@ section {
     margin: 0 auto;
     width:250px;
     transform: rotateY(45deg);
-    background-image: radial-gradient(red, yellow);
+    background-image: radial-gradient(red, rgb(102, 102, 26));
     &:hover{
         transform: none;
         .flip{

@@ -14,11 +14,8 @@
     
 }
 .ball{
-//  border-radius: 50%;
+ border-radius: 50%;
  position: absolute;
- transition: 0.3s;
- 
-
 }
 @for $i from 0 through 150 {
     .ball-#{$i} {
@@ -29,12 +26,12 @@
         height: #{$random + "px"};
         top:#{random(100) + "%"};
         left:#{random(100) + "%"};
-        animation: test-#{$i};
+        animation:random-position-#{$i};
         animation-iteration-count: infinite;
         animation-duration: #{random(15) + 3 +"s"};
        
     }
-    @keyframes test-#{$i} {
+    @keyframes random-position-#{$i} {
         0%{
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
