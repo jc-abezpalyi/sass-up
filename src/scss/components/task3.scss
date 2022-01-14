@@ -13,10 +13,11 @@
   }
 }
 @for $i from 0 through 300 {
+  $random-value:#{random(3) + 'px'};
   .star-#{$i} {
     left: #{random(100)} + '%';
     top: #{random(100)} + '%';
-    width: #{random(3)}+ 'px';
-    height: #{random(3)}+ 'px';
+    width: $random-value;
+    height: $random-value;
   }
 }
