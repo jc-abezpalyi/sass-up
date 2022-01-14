@@ -1,76 +1,74 @@
-.balls-container{
-    height: 500px;
-    max-width: 80%;
-    position: relative;
-    margin: 0 auto;
-    
+.balls-container {
+  height: 500px;
+  max-width: 80%;
+  position: relative;
+  margin: 0 auto;
 }
-.wrapper__balls{
-    height: 700px;
-    background-color: black;
-    
+.wrapper__balls {
+  height: 700px;
+  background-color: black;
 }
-.ball{
- border-radius: 50%;
- position: absolute;
+.ball {
+  border-radius: 50%;
+  position: absolute;
 }
 @for $i from 0 through 150 {
-    .ball-#{$i} {
-        @include random-rgba;
+  .ball-#{$i} {
+    @include random-rgba;
 
-        $random: random(200);
-        width: #{$random  + "px"};
-        height: #{$random + "px"};
-        top:#{random(100) + "%"};
-        left:#{random(100) + "%"};
-        animation:random-position-#{$i};
-        animation-iteration-count: infinite;
-        animation-duration: #{random(25) + 3 +"s"};
-    }
-    @keyframes random-position-#{$i} {
-        0% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        10% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        20% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        30% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        40% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        } 
-        50% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        60% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        70% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        80% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        90% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"}; 
-        }
-        100% {
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-     }
+    $random: random(200);
+    width: #{$random + 'px'};
+    height: #{$random + 'px'};
+    top: #{random(100) + '%'};
+    left: #{random(100) + '%'};
+    animation: random-position-#{$i};
+    animation-iteration-count: infinite;
+    animation-duration: #{random(25) + 3 +'s'};
   }
+  @keyframes random-position-#{$i} {
+    0% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    10% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    20% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    30% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    40% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    50% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    60% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    70% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    80% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    90% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+    100% {
+      top: #{random(100) + '%'};
+      left: #{random(100) + '%'};
+    }
+  }
+}

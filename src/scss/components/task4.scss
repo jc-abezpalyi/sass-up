@@ -1,32 +1,33 @@
 .circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background:
-      0 0 / 100% 100% conic-gradient(from 0deg, 
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-        #ff0000
-      );
-  }
-
-  .task-4{
-      display: flex;
-      flex-wrap: wrap;
-  }
-  .hue{
-    width: 15px;
-    margin: 3px 5px;
-    height: 15px;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: 0 0 / 100% 100%
+    conic-gradient(
+      from 0deg,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #ff00ff,
+      #ff0000
+    );
 }
 
-  @for $i from 0 through 365 {
-    .hue-color-#{$i}{
-        background: adjust-hue(#58f058, $i);
-    }
+.task-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hue {
+  width: 15px;
+  margin: 3px 5px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+@for $i from 0 through 365 {
+  .hue-color-#{$i} {
+    background: adjust-hue(#58f058, $i);
   }
+}

@@ -1,35 +1,30 @@
-@mixin border-animated ($border-color,$is-border,$border-height ) {
-    position: relative;
-    @if $is-border {
-        &:before{  
-            transition: width 0.42s cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            content: '';
-            height: $border-height;
-            background: $border-color;
-        }
-        &:hover::before{
-            width: 100%;
-        }
-    } @else {
-            &:hover:before {
-                width: 100%;
-            }
+@mixin border-animated($border-color, $is-border, $border-height) {
+  position: relative;
+  @if $is-border {
+    &:before {
+      transition: width 0.42s cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      content: '';
+      height: $border-height;
+      background: $border-color;
     }
+    &:hover::before {
+      width: 100%;
+    }
+  } @else {
+    &:hover:before {
+      width: 100%;
+    }
+  }
 }
 .task-6 {
-        text-align: center;
-            height: 400px;
-        &__text-wrapper{
-            font-size: 34px;
-                @include border-animated(red,true,3px)
-            
-        }
-   
+  text-align: center;
+  height: 400px;
+  &__text-wrapper {
+    font-size: 34px;
+    @include border-animated(red, true, 3px);
+  }
 }
-
-   
-

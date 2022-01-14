@@ -4,16 +4,16 @@ $blok-colors: (
   color-yellow: yellow,
   color-pink: pink,
 );
-.task-1{
-    height: 400px;
-    display: flex;
-    div{
-        height: 100%;
-        width: 25%;
+.task-1 {
+  height: 400px;
+  display: flex;
+  div {
+    height: 100%;
+    width: 25%;
+  }
+  @each $status, $color in $blok-colors {
+    &--#{$status} {
+      background: $color;
     }
-    @each $status, $color in $blok-colors {
-        &--#{$status} {
-          background: $color;
-        }
-      }
+  }
 }

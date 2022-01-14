@@ -6,4 +6,4 @@ const createDots = () => {
        [...parentContainer.childNodes].map((el,index) => el.classList=`dot dot-${index+1}`)
 }
 
-export default createDots
+export default createDots;
