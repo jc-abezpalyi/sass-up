@@ -1,6 +1,3 @@
-@mixin background-random-color {
-    background-color: rgba(random(255),random(255),random(255),random(100)/100);
-}
 .balls-container{
     height: 500px;
     max-width: 80%;
@@ -19,7 +16,7 @@
 }
 @for $i from 0 through 150 {
     .ball-#{$i} {
-        @include background-random-color;
+        @include random-rgba;
 
         $random: random(200);
         width: #{$random  + "px"};
@@ -28,53 +25,52 @@
         left:#{random(100) + "%"};
         animation:random-position-#{$i};
         animation-iteration-count: infinite;
-        animation-duration: #{random(15) + 3 +"s"};
-       
+        animation-duration: #{random(25) + 3 +"s"};
     }
     @keyframes random-position-#{$i} {
-        0%{
+        0% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        10%{
+        10% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        20%{
+        20% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        30%{
+        30% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        40%{
+        40% {
+           top:#{random(100) + "%"};
+           left:#{random(100) + "%"};
+        } 
+        50% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        50%{
+        60% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        60%{
+        70% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        70%{
+        80% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-        80%{
-           top:#{random(100) + "%"};
-           left:#{random(100) + "%"};
-        }
-        90%{
+        90% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"}; 
         }
-        100%{
+        100% {
            top:#{random(100) + "%"};
            left:#{random(100) + "%"};
         }
-   }
+     }
   }
